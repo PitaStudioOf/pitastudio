@@ -425,65 +425,54 @@ footer a:hover {
   color: #e74c3c;
 }
 
-	  /* =======================================================================
-   AJUSTE DE ALINHAMENTO DOS ESPETÁCULOS
+/* =======================================================================
+   ESPETÁCULOS - DUAS IMAGENS CLICÁVEIS
 ======================================================================= */
-
-/* Mantém os cards alinhados lado a lado */
 .shows {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* Garante mesma altura */
+  align-items: center;
   flex-wrap: wrap;
   gap: 40px;
+  padding: 40px 10%;
 }
 
-/* Faz com que todos os cards tenham a mesma altura */
 .show {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 45%;
-  min-width: 350px;
-  max-width: 600px;
+  flex: 1 1 400px;
+  max-width: 550px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Força o conteúdo interno a ocupar o mesmo espaço */
-.show-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.show a {
+  display: block;
 }
 
-/* Mantém os vídeos proporcionais sem esticar o card */
-.video-container {
-  position: relative;
+.show img {
   width: 100%;
-  padding-bottom: 56.25%; /* proporção 16:9 */
-  height: 0;
-  overflow: hidden;
-  border-radius: 6px;
-  margin-top: 10px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+/* efeito hover */
+.show img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Mantém alinhamento no desktop */
-@media (min-width: 1024px) {
-  #espetaculos {
-    max-width: 1300px;
-    margin: 0 auto;
+/* responsivo */
+@media (max-width: 768px) {
+  .shows {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .show {
+    max-width: 90%;
   }
 }
-
 
     /* =======================================================================
        AJUSTES FINAIS
@@ -591,44 +580,29 @@ footer a:hover {
   <section id="espetaculos">
     <h2>Espetáculos</h2>
 
-    <div class="shows">
+<div class="shows">
 
-      <!-- Espetáculo 1 -->
-      <div class="show">
-        <img src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_1.jpg" alt="Espetáculo Nem Morta">
-        <div class="show-content">
-          <h3>Nem Morta</h3>
-          <p><strong>Ano:</strong> 2017</p>
-          <p><strong>Sinopse:</strong> Um mergulho na memória e nas relações familiares, entre o real e o imaginário. “Nem Morta” fala de amor, perda e reencontro, uma história contada com poesia, humor e emoção.</p>
-          <div class="video-container">
-            <iframe 
-              src="https://www.youtube.com/embed/aTPtG6OXsvY?si=k89W6W2PRKqYwaCz"
-              title="Espetáculo Nem Morta – PITA"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
+  <!-- Espetáculo 1 -->
+  <div class="show">
+  <a href="nemmorta.html">
+    <img 
+      src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_1.jpg" 
+      alt="Espetáculo Nem Morta">
+  </a>
+</div>
 
-      <!-- Espetáculo 2 -->
-      <div class="show">
-        <img src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_2.jpg" alt="Espetáculo Fale Baixo">
-        <div class="show-content">
-          <h3>Fale Baixo</h3>
-          <p><strong>Ano:</strong> 2023</p>
-          <p><strong>Sinopse:</strong> Jorge tenta lidar com o caos de sua vida amorosa enquanto busca um grande amor. “Fale Baixo” mistura humor e vulnerabilidade, revelando como o silêncio pode ser o caminho para ouvir a si mesmo.</p>
-          <div class="video-container">
-            <iframe 
-              src="https://www.youtube.com/embed/LtWKg30GS-Q?si=em0Fd-Bx_d69g1rF"
-              title="Espetáculo Fale Baixo – PITA"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
 
-    </div>
-  </section>
+  <!-- Espetáculo 2 -->
+  <div class="show">
+    <a href="falebaixo.html">
+      <img 
+        src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_2.jpg" 
+        alt="Espetáculo Fale Baixo">
+    </a>
+  </div>
+
+</div>
+
 
   <!-- ============================================================
        CONTATO

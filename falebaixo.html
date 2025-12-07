@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espetáculos | Pita Studio</title>
+<!-- ============================================================
+     META TAGS PARA COMPARTILHAMENTO (FACEBOOK / WHATSAPP / TWITTER)
+============================================================ -->
+<meta property="og:title" content="Pita Studio | Espetáculos">
+<meta property="og:description" content="Teatro que pulsa no agora — conheça os espetáculos de Tauan Pita e do Pita Studio.">
+<meta property="og:image" content="https://agenciaanave.com.br/pitastudio/img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_1.jpg">
+<meta property="og:url" content="https://agenciaanave.com.br/pitastudio/espetaculos.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+
+<!-- META TAGS PARA TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pita Studio | Espetáculos">
+<meta name="twitter:description" content="Teatro que pulsa no agora — conheça os espetáculos de Tauan Pita e do Pita Studio.">
+<meta name="twitter:image" content="https://agenciaanave.com.br/pitastudio/img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_1.jpg">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: #2b3bc0; }
+	  
+	  /* BANNER PRINCIPAL CENTRALIZADO */
+.banner-topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* compensa o header fixo */
+  margin-bottom: 40px;
+}
+
+.banner-topo img {
+  width: 939px;
+  height: 279px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .banner-topo img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+    /* BANNER */
+    .banner {
+      background: url('img/banner_Espetaculo_StudioPita.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      margin-top: 80px; /* compensar header fixo */
+    }
+
+  /* CONTEÚDO PRINCIPAL */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;  /* <-- muda aqui de flex-start para center */
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 10%;
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.video {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* =============================
+   VÍDEO CENTRALIZADO E SEPARADO
+============================= */
+.video-section {
+  max-width: 900px;           /* largura máxima como a galeria */
+  margin: 40px auto;          /* centraliza e dá respiro */
+  text-align: center;         /* centraliza o vídeo dentro */
+}
+
+.video-section video {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+    /* GALERIA */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 60px 10%;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: #0b0b0b;
+      color: #ccc;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #2b3bc0;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #e74c3c;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 10px 20px;
+      }
+
+      .banner {
+        height: 250px;
+        font-size: 2rem;
+      }
+
+      .content {
+        flex-direction: column;
+        padding: 40px 8%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html"><img src="img/Logo_PitaStudio.png" alt="PITA STUDIO"></a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html#hero">Início</a></li>
+        <li><a href="index.html#tauan">Sobre</a></li>
+        <li><a href="espetaculos.html">Espetáculos</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+	
+<!-- BANNER PRINCIPAL CENTRALIZADO -->
+<section class="banner-topo">
+  <img src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_2.jpg" alt="Banner principal dos espetáculos">
+</section>
+
+
+
+  <!-- TEXTO + VÍDEO -->
+  <section class="content">
+    <div class="texto">
+      <h3>Fale Baixo</h3>
+      <p><strong>Ano:</strong> 2023</p>
+      <p>Em <em>“Fale Baixo”</em>, Jorge tenta lidar com o caos silencioso da própria vida enquanto busca um grande amor. Entre humor e afeto, o personagem revisita situações marcadas por carência, identidade e relacionamentos, transformando pequenas dores do cotidiano em confissões cômicas e profundamente humanas.
+
+O espetáculo nasceu como uma série de vídeos nas redes sociais durante a pandemia e, devido à repercussão, ganhou forma no palco. Com linguagem direta e sensível, Jorge divide com o público suas fragilidades, exageros e tentativas de compreender quem realmente é.
+
+Entre risos e vulnerabilidades, Fale Baixo revela como o silêncio pode ser cura e conflito ao mesmo tempo. Enquanto figuras de seu passado surgem para completar esse mosaico emocional, humor e introspecção se misturam, criando uma comicidade carregada de verdade, delicadeza e poesia.</p>
+    </div>
+
+<!-- ============================================================
+     VÍDEO DO ESPETÁCULO
+============================================================ -->
+<div class="video">
+  <video 
+    id="videoEspetaculo"
+    autoplay 
+    muted 
+    playsinline 
+    loop 
+    controls 
+    poster="img/banner_Espetaculo_StudioPita_NemMorta.jpg">
+    
+    <source src="videos/FaleBaixo_TauanPita.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+</div>
+
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria">
+    <img src="img/Galeria_01_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE.jpg" alt="Cena 1">
+    <img src="img/Galeria_04_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE.jpg" alt="Cena 2">
+    <img src="img/Galeria_03_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE.jpg" alt="Cena 3">
+    <img src="img/Galeria_02_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE.jpg" alt="Cena 4">
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    © 2025 PITA STUDIO Produção Independente de Teatro e Arte<br>
+    criado por <a href="https://agenciaanave.com.br" target="_blank">@AnaveAgencia</a>
+  </footer>
+</body>
+</html>

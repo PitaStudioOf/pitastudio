@@ -431,6 +431,98 @@ footer {
 #espetaculos {
   padding-top: 40px;
 }
+	 /* =======================================================================
+   🔧 ESPETÁCULOS — CENTRALIZADOS E RESPONSIVOS
+======================================================================= */
+#espetaculos {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#espetaculos img {
+  display: block;
+  width: 90%;              /* Mantém margens laterais suaves */
+  max-width: 900px;        /* Limita o tamanho em telas grandes */
+  height: auto;
+  margin: 0 auto;          /* Centraliza horizontalmente */
+  object-fit: cover;
+  border-radius: 10px;     /* Opcional — mantém bordas suaves */
+}
+
+/* Remove o espaço entre as imagens */
+#espetaculos img + img {
+  margin-top: 0;           /* Nenhum espaço entre as duas */
+  padding-top: 0;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  #espetaculos {
+    padding: 20px 0;
+  }
+
+  #espetaculos img {
+    width: 100%;           /* Ocupa toda a largura no celular */
+    max-width: 100%;
+    border-radius: 0;      /* Remove cantos arredondados no mobile (opcional) */
+  }
+}
+/* =======================================================================
+   ✨ EFEITO DE ZOOM NAS IMAGENS DOS ESPETÁCULOS
+======================================================================= */
+#espetaculos img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+#espetaculos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+/* =======================================================================
+   🎭 AJUSTE — LINKS DAS IMAGENS DE ESPETÁCULOS
+======================================================================= */
+#espetaculos .shows a {
+  display: block;
+  width: 46%;              /* mesmo tamanho das imagens anteriores */
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#espetaculos .shows a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+#espetaculos .shows img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  #espetaculos .shows {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #espetaculos .shows a {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+
 </style>
 
 </head>
@@ -530,30 +622,11 @@ footer {
        ESPETÁCULOS
   ============================================================ -->
   <section id="espetaculos">
-    <h2>Espetáculos</h2>
+  <h2>Espetáculos</h2>
+  <div class="shows">
+    <a href="../../Site/nemmorta.html"><img src="../../Site/img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_1.jpg" alt="Nem Morta"></a> <a href="../../Site/falebaixo.html"><img src="../../Site/img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_2.jpg" alt="Fale Baixo"></a> </div>
+</section>
 
-<div class="shows">
-
-  <!-- Espetáculo 1 -->
-  <div class="show">
-  <a href="nemmorta.html">
-    <img 
-      src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_1.jpg" 
-      alt="Espetáculo Nem Morta">
-  </a>
-</div>
-
-
-  <!-- Espetáculo 2 -->
-  <div class="show">
-    <a href="falebaixo.html">
-      <img 
-        src="img/banner_Espetaculo_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE_2.jpg" 
-        alt="Espetáculo Fale Baixo">
-    </a>
-  </div>
-
-</div>
 
 
   <!-- ============================================================

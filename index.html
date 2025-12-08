@@ -5,244 +5,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pita Studio</title>
 
-  <style>
-    /* =======================================================================
-       RESET & BASE
-    ======================================================================= */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+ <style>
+/* =======================================================================
+   RESET & BASE
+======================================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #222;
-      background-color: #fff;
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: #111;
-    }
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #111;
+}
 
-    a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; }
 
-    /* =======================================================================
-       HEADER
-    ======================================================================= */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-    }
+/* =======================================================================
+   HEADER
+======================================================================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
 
-    header h1 {
-      color: #fff;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
+header h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-    }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
 
-    nav a {
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-    nav a:hover {
-      color: #2b3bc0;
-    }
+nav a:hover {
+  color: #2b3bc0;
+}
 
-    /* =======================================================================
-       HERO / BANNER PRINCIPAL
-    ======================================================================= */
-    #hero {
-      height: 100vh;
-      background: url('img/banner_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE.jpg') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
-      position: relative;
-    }
+/* =======================================================================
+   HERO / BANNER PRINCIPAL
+======================================================================= */
+#hero {
+  height: 100vh;
+  background: url('img/banner_StudioPita_NemMorta_FaleBaixo_TuanPita_RtJobs_AgenciaANAVE.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  position: relative;
+}
 
-    #hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-    }
+#hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
 
-    #hero .content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-    }
+#hero .content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
 
-    #hero h2 {
-      color: #fff;
-      font-size: 3rem;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    }
+#hero h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
 
-    #hero p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-    }
+#hero p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
 
-    #hero a {
-      padding: 10px 25px;
-      background: #2b3bc0;
-      color: #fff;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
+#hero a {
+  padding: 10px 25px;
+  background: #2b3bc0;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
 
-    #hero a:hover {
-      background: #e74c3c;
-    }
+#hero a:hover { background: #e74c3c; }
 
-    /* =======================================================================
-       SEÇÕES GENÉRICAS
-    ======================================================================= */
-    section {
-      padding: 70px 10%;
-    }
+/* =======================================================================
+   SEÇÕES GENÉRICAS
+======================================================================= */
+section {
+  padding: 70px 10%;
+}
 
-    section h2 {
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 2rem;
-      position: relative;
-    }
+section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  position: relative;
+}
 
-    section h2::after {
-      content: '';
-      width: 60px;
-      height: 3px;
-      background: #2b3bc0;
-      display: block;
-      margin: 10px auto 0;
-    }
+section h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #2b3bc0;
+  display: block;
+  margin: 10px auto 0;
+}
 
-    /* =======================================================================
-       SEÇÃO SOBRE
-    ======================================================================= */
-    #sobre p {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      text-align: center;
-    }
+/* =======================================================================
+   SEÇÃO SOBRE
+======================================================================= */
+#sobre p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
 
-    /* =======================================================================
-       SEÇÃO ESPETÁCULOS
-    ======================================================================= */
-    .shows {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
+/* =======================================================================
+   SEÇÃO ESPETÁCULOS
+======================================================================= */
+.shows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 10%;
+}
 
-    .show {
-      background: #f7f7f7;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
+.show {
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1 1 400px;
+  max-width: 550px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .show:hover { transform: scale(1.03); }
+.show:hover { transform: scale(1.03); }
 
-    .show img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      aspect-ratio: 30 / 9;
-      background-color: #000;
-    }
+.show a { display: block; }
 
-    .show-content { padding: 20px; }
+.show img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  display: block;
+}
 
-    .show-content h3 { margin-bottom: 10px; }
+/* =======================================================================
+   SEÇÃO GALERIA
+======================================================================= */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  justify-items: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .show-content p {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-    }
+.galeria img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
 
-    .video-container iframe {
-      width: 100%;
-      height: 250px;
-      border: none;
-      margin-top: 10px;
-      border-radius: 6px;
-    }
-
-    /* =======================================================================
-       SEÇÃO GALERIA
-    ======================================================================= */
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 50px;
-      justify-items: center;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .galeria img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 5;
-      object-fit: contain;
-      background-color: #fff;
-      border-radius: 8px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-    }
-
-    .galeria img:hover {
-      transform: scale(1.5) translateY(-5%);
-      z-index: 10;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    }
+.galeria img:hover {
+  transform: scale(1.5) translateY(-5%);
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
 
 /* =======================================================================
    SEÇÃO TAUAN PITA
 ======================================================================= */
 #tauan {
   background: #fff;
-  padding: 100px 10% 40px; /* reduzido o bottom padding para melhor transição */
+  padding: 100px 10% 40px;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 40px; /* garante espaço consistente antes da próxima seção */
+  margin: 0 auto 40px;
 }
 
-/* título centralizado com traço */
 .tauan-title {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -264,7 +252,6 @@
   margin: 8px auto 0;
 }
 
-/* layout com imagem à esquerda e texto à direita */
 .tauan-foto {
   float: left;
   width: 330px;
@@ -272,7 +259,6 @@
   margin: 0 40px 20px 0;
 }
 
-/* bloco de texto */
 .tauan-text {
   line-height: 1.9;
   font-size: 1rem;
@@ -286,67 +272,37 @@
   max-width: 850px;
 }
 
-.tauan-text p {
-  margin-bottom: 18px;
-  text-align: justify;
-  text-indent: 0;
-}
+.tauan-text p { margin-bottom: 18px; }
 
-#tauan::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+#tauan::after { content: ""; display: block; clear: both; }
 
 /* =======================================================================
-   AJUSTE DE ESPAÇAMENTO ENTRE TAUAN PITA E PITA STUDIO
+   AJUSTE ENTRE SEÇÕES
 ======================================================================= */
-#tauan {
-  padding-bottom: 30px; /* reduz a distância no final da bio */
-  margin-bottom: 0;
-}
-
-#sobre {
-  padding-top: 30px; /* reduz o espaço antes do título "Pita Studio" */
-  margin-top: 0;
-}
+#tauan { padding-bottom: 30px; margin-bottom: 0; }
+#sobre { padding-top: 30px; margin-top: 0; }
 
 /* =======================================================================
    RESPONSIVO - TAUAN PITA + MENU CELULAR
 ======================================================================= */
 @media (max-width: 768px) {
-
-  /* Ajustes gerais da seção Tauan Pita */
-  #tauan {
-    padding: 60px 8% 20px; /* reduz espaçamento inferior no mobile */
-    margin-bottom: 20px;
-  }
-
-  /* ===== Ajuste de MENU RESPONSIVO (CELULAR) ===== */
   header {
-    flex-direction: column; /* empilha logo e menu */
+    flex-direction: column;
     align-items: center;
-    padding: 10px 20px; /* reduz padding lateral */
+    padding: 10px 20px;
   }
 
   header h1 img {
-    width: 160px; /* diminui o tamanho do logo */
-    height: auto;
-    margin-bottom: 8px; /* espaço entre logo e menu */
+    width: 160px;
+    margin-bottom: 8px;
   }
 
   nav ul {
-    flex-wrap: wrap; /* permite quebrar linha se necessário */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* reduz espaço entre links */
-    padding: 0;
+    gap: 15px;
   }
 
-  nav a {
-    font-size: 0.95rem; /* texto ligeiramente menor */
-  }
-
-  /* ===== Outros ajustes já existentes ===== */
   .tauan-foto {
     float: none;
     display: block;
@@ -354,20 +310,8 @@
     width: 80%;
   }
 
-  .tauan-text {
-    max-width: 100%;
-    text-align: justify;
-  }
-
-  .tauan-text p:last-child {
-    margin-bottom: 0;
-  }
-
-  #sobre h2 {
-    margin-top: 30px; /* espaço suave no celular */
-  }
+  .tauan-text { max-width: 100%; }
 }
-
 
 /* =======================================================================
    RODAPÉ / CONTATO
@@ -380,17 +324,6 @@
   font-size: 0.95rem;
 }
 
-#contato a {
-  color: #2b3bc0;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#contato a:hover {
-  color: #e74c3c;
-}
-
-/* ÍCONES SOCIAIS */
 .footer-icons {
   margin-top: 25px;
 }
@@ -402,11 +335,8 @@
   transition: color 0.3s;
 }
 
-.footer-icons a:hover {
-  color: #e74c3c;
-}
+.footer-icons a:hover { color: #e74c3c; }
 
-/* FOOTER FINAL */
 footer {
   background: #0b0b0b;
   color: #ccc;
@@ -415,72 +345,94 @@ footer {
   font-size: 0.85rem;
 }
 
-footer a {
-  color: #2b3bc0;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer a:hover {
-  color: #e74c3c;
-}
-
 /* =======================================================================
-   ESPETÁCULOS - DUAS IMAGENS CLICÁVEIS
+   🔧 CORREÇÃO FINAL — IMAGENS COLADAS NO CELULAR (SEM ESPAÇO INVISÍVEL)
 ======================================================================= */
-.shows {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 40px 10%;
-}
-
-.show {
-  flex: 1 1 400px;
-  max-width: 550px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.show a {
-  display: block;
-}
-
-.show img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  object-fit: cover;
-}
-
-/* efeito hover */
-.show img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* responsivo */
 @media (max-width: 768px) {
+
+  #espetaculos {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  #espetaculos h2 {
+    margin-bottom: 10px !important;
+  }
+
   .shows {
-    flex-direction: column;
-    gap: 25px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .show {
-    max-width: 90%;
+    width: 100% !important;
+    max-width: 420px !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+  }
+
+  .show a {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .show img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    object-fit: cover !important;
+    vertical-align: bottom !important;
+  }
+
+  /* remove qualquer container residual interno */
+  .show-content {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* remove pseudo-elementos invisíveis */
+  .show::before,
+  .show::after {
+    display: none !important;
+    content: none !important;
   }
 }
 
-    /* =======================================================================
-       AJUSTES FINAIS
-    ======================================================================= */
-    #espetaculos {
-      padding-top: 40px;
-    }
-  </style>
+
+  /* Garante que nada “deixe sombra” */
+  .show::after,
+  .show::before {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+/* =======================================================================
+   AJUSTES FINAIS
+======================================================================= */
+#espetaculos {
+  padding-top: 40px;
+}
+</style>
+
 </head>
 
 
